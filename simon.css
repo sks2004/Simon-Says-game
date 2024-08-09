@@ -34,3 +34,47 @@ body{
 .userflash{
     background-color: green;
 }
+
+.start-btn{
+    width: 90px;
+    height: 32px;
+    background-color:blanchedalmond;
+    border-radius: 30px;
+    border: 1px solid black;
+    font-size: large;
+    font-weight: 400;
+}
+
+.rmvBtn{
+    display: none;
+}
+.resp{
+    display: none;
+}
+
+@media (width <= 800px) {
+    .btn{
+        height: 130px;
+        width: 130px;
+        border-radius: 20%;
+        border: 5px solid black;
+        margin: 1rem;
+    }
+}
+
+@media (width<318px) {
+    .main{
+        display: none;
+    }
+    .resp{
+        display: inline;
+    }
+}
+@media (height<470px) {
+    .main{
+        display: none;
+    }
+    .resp{
+        display: inline;
+    }
+}

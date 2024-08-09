@@ -7,13 +7,24 @@ let started = false;
 let level=0;
 
 let h2 = document.querySelector("h2");
+let startBtn = document.querySelector(".start-btn");
 
-document.addEventListener("keypress",function(){
+startBtn.addEventListener("click",startGame);
+
+function startGame(){
     if(started==false){
+        startBtn.classList.add("rmvBtn");
         started=true;  
         levelUp();
     }
-});
+}
+
+// document.addEventListener("keypress",function(){
+//     if(started==false){
+//         started=true;  
+//         levelUp();
+//     }
+// });
 
 function gameFlash(btn){
     btn.classList.add("gameflash");
@@ -50,11 +61,12 @@ function checkAns(idx){
         }
     }
     else{
-        h2.innerHTML = `Game Over! Your score was <b>${level}</b> <br> Press any key to start.`;
+        h2.innerHTML = `Game Over! Your score was <b>${level}</b>.`;
         document.querySelector("body").style.backgroundColor = "red";
         setTimeout(function(){
             document.querySelector("body").style.backgroundColor = "white";
         },150);
+        startBtn.classList.remove("rmvBtn");
         reset();
     }
 }
