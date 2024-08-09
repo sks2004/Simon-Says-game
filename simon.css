@@ -61,7 +61,6 @@ body{
         margin: 1rem;
     }
 }
-
 @media (width<318px) {
     .main{
         display: none;

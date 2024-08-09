@@ -19,13 +19,6 @@ function startGame(){
     }
 }
 
-// document.addEventListener("keypress",function(){
-//     if(started==false){
-//         started=true;  
-//         levelUp();
-//     }
-// });
-
 function gameFlash(btn){
     btn.classList.add("gameflash");
     setTimeout(function(){
